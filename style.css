@@ -40,7 +40,7 @@ padding:15px;
 display:block;
 z-index:1000;/*定栏强制置顶*/
 }
-header>h1{/*顶栏标题*/
+header h1{/*顶栏标题*/
 margin:0;
 color:#ffffff;
 font-size:2em;
@@ -140,8 +140,3 @@ font-weight:400;
 #right,header,footer{display:none;}
 *{background:white;box-shadow:none;}
 }
-
-
-
-
-
