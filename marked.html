@@ -3,18 +3,25 @@
   <head>
     <meta charset=UTF-8">
     <title>marked</title>
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    
     <script src="/javascript/marked/lib/marked.umd.js" id="marked"></script>
     <script src="/javascript/marked-config.js" id="marked-config"></script>
     <script src="/javascript/base64.js" id="base64"></script>
+
+    <link rel="stylesheet" href="/javascript/highlight.js/styles/github.min.css">
+    <script src="/javascript/highlight.js/highlight.min.js" id="highlight.js"></script>
+
+    <script src="/javascript/mathjax-config.js" id="mathjax-config"></script>
+    <script src="/javascript/mathjax/es5/tex-chtml.js" id="mathjax"></script>
   </head>
   <body>
     <textarea id="contents" style="width:300px;height:300px;"></textarea>
     <br/>
     <input type="button" onclick="contents.value=utob(contents.value);" value="base64加密">
     <input type="button" onclick="contents.value=btou(contents.value);" value="base64解密">
-    <input type="button" onclick="document.getElementById('marked').innerHTML=marked.parse(contents.value);" value="Markdown渲染">
+    <input type="button" onclick="document.getElementById('article').innerHTML=marked.parse(contents.value);" value="Markdown渲染">
     <br/>
-    <div id="marked"></div>
+    <div id="article"></div>
   </body>
 </html>
-
