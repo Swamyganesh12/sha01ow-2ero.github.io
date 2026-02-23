@@ -20,8 +20,9 @@
     <br/>
     <input type="button" onclick="contents.value=utob(contents.value);" value="base64加密">
     <input type="button" onclick="contents.value=btou(contents.value);" value="base64解密">
-    <input type="button" onclick="document.getElementById('article').innerHTML=marked.parse(contents.value);" value="Markdown渲染">
+    <input type="button" onclick="document.getElementById('article').innerHTML=marked.parse(contents.value);hljs.highlightAll();if(window.MathJax)MathJax.typesetPromise?.();" value="Markdown渲染">
     <br/>
     <div id="article"></div>
   </body>
 </html>
+
