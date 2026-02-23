@@ -81,12 +81,12 @@ margin:5px 0;
 border-left:5px solid #d0d0d0;
 }
 /*标题*/
-h1{margin:20px 0 0;font-size:2.5em;}
-h2{margin:18px 0 0;font-size:2em;}
-h3{margin:16px 0 0;font-size:1.75em;}
-h4{margin:14px 0 0;font-size:1.5em;}
-h5{margin:12px 0 0;font-size:1.33em;}
-h6{margin:10px 0 0;font-size:1.17em;}
+h1{margin:21px 0 0;font-size:2.33em;}
+h2{margin:20px 0 0;font-size:2em;}
+h3{margin:19px 0 0;font-size:1.75em;}
+h4{margin:18px 0 0;font-size:1.5em;}
+h5{margin:17px 0 0;font-size:1.33em;}
+h6{margin:16px 0 0;font-size:1.17em;}
 h1.center,h2.center,h3.center,h4.center,h5.center,h6.center{margin:0.5em 0;text-align:center;}
 /*分隔线*/
 hr{border-color:#00000012;}
@@ -140,3 +140,4 @@ font-weight:400;
 #right,header,footer{display:none;}
 *{background:white;box-shadow:none;}
 }
+
