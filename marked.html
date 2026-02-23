@@ -12,6 +12,9 @@
     <br/>
     <input type="button" onclick="contents.value=utob(contents.value);" value="base64加密">
     <input type="button" onclick="contents.value=btou(contents.value);" value="base64解密">
-    <input type="button" onclick="contents.value=marked.parse(contents.value);" value="Markdown转HTML">
+    <input type="button" onclick="document.getElementById('marked').innerHTML=marked.parse(contents.value);" value="Markdown渲染">
+    <br/>
+    <div id="marked"></div>
   </body>
 </html>
+
