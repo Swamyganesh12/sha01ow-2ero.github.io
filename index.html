@@ -79,11 +79,11 @@ function putmarkdown(selector,url)
 {
   fetch(url)
   .then(response=>{
-      if(!response.ok)throw new Error(`HTTP ${response.status}`);
-      return response.text();
-    })
-  .then(markdown=>{
-    document.querySelector(selector).innerHTML=marked.parse(markdown);//marked（按 css 的 id 和 class 选择器查找）
+    if(!response.ok)throw new Error(`Markdown 加载失败：HTTP ${response.status}`);
+    return response.text();
+  })
+  .then(text=>{
+    document.querySelector(selector).innerHTML=marked.parse(text);//marked（按 css 的 id 和 class 选择器查找）
     hljs.highlightAll();//highlight.js
     if(window.MathJax)MathJax.typesetPromise?.();
   })
