@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <!-- info -->
+    <meta charset="UTF-8">
+    <meta name="application-name" content="sha01ow_2ero's Home">
+    <meta name="description" content="a simple website for myself">
+    <meta name="keywords" content="audio,javascript,css,game,html,markdown,image,cpp,article,mathjax,scratch,oi,video,project">
+    <meta name="author" content="sha01ow_2ero">
+    <title>sha01ow_2ero's Home</title>
+    <link rel="icon" type="image/png" href="/image/icon.png">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <!-- highlight.css -->
+    <link rel="stylesheet" href="/javascript/highlight.js/styles/github.min.css">
+  </head>
+  <body>
+    <header>
+      <a href="/"><h1>sha01ow_2ero's</h1></a>
+    </header>
+    <div id="middle">
+      <div id="left">
+        <div class="card">
+          <main><article><p>Markdown 加载中……</p></article></main>
+        </div>
+        <footer id="footer-left"></footer>
+      </div>
+      <div id="right">
+        <div class="card">
+          <audio controls loop>
+            <source src="/audio/world-is-mine-remix.flac" type="audio/flac"></source>
+            您的浏览器不支持 audio 元素或 audio 元素的 flac 格式音频文件……
+          </audio>
+          <nav>
+            <a class="card" href="/article"><p>article</p></a>
+            <a class="card" href="/image"><p>image</p></a>
+            <a class="card" href="/video"><p>video</p></a>
+            <a class="card" href="/audio"><p>video</p></a>
+            <a class="card" href="/project"><p>project</p></a>
+          </nav>
+        </div>
+        <footer id="footer-right">
+          <p>© 2024-2026 sha01ow-2ero. All Rights Reserved.<br/>Developed by the <a href="https://github.com/sha01ow-2ero/">sha01ow_2ero</a></p>
+          <p>为了保证您的使用体验，建议使用国际网络环境访问</p>
+        </footer>
+      </div>
+    </div>
+    <!-- marked -->
+    <script src="/javascript/marked/lib/marked.umd.js" id="marked"></script>
+    <script src="/javascript/marked-config.js" id="marked-config"></script>
+    <script src="/javascript/base64.js" id="base64"></script>
+    <!-- highlight.js -->
+    <script src="/javascript/highlight.js/highlight.min.js" id="highlight.js"></script>
+    <!-- mathjax -->
+    <script src="/javascript/mathjax-config.js" id="mathjax-config"></script>
+    <script src="/javascript/mathjax/es5/tex-chtml.js" id="mathjax"></script>
+    <!-- 渲染/render -->
+    <script>
+//footer
+let last_is_mobile=null;
+function footer()
+{
+  const footer_left=document.getElementById('footer-left');
+  const footer_right=document.getElementById('footer-right');
+  const footerHTML='<p>© 2024-2026 sha01ow-2ero. All Rights Reserved.<br/>Developed by the <a href="https://github.com/sha01ow-2ero/">sha01ow_2ero</a></p><p>为了保证您的使用体验，建议使用国际网络环境访问</p>';
+  let is_mobile;
+  if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|Mobile/i.test(navigator.userAgent)||window.matchMedia('(max-width: 1080px)').matches)//移动端
+    is_mobile=true;
+  else//PC端
+    is_mobile=false;
+  if(is_mobile===last_is_mobile)return;
+  last_is_mobile=is_mobile;
+  footer_left.innerHTML=is_mobile?'':footerHTML;
+  footer_right.innerHTML=is_mobile?footerHTML:'';
+}
+//marked渲染
+function putmarkdown(selector,url)
+{
+  fetch(url)
+  .then(response=>{
+    if(!response.ok)throw new Error(`Markdown 加载失败：HTTP ${response.status}`);
+    return response.text();
+  })
+  .then(text=>{
+    document.querySelector(selector).innerHTML=marked.parse(text);//marked（按 css 的 id 和 class 选择器查找）
+    hljs.highlightAll();//highlight.js
+    if(window.MathJax)MathJax.typesetPromise?.();
+  })
+  .catch(error=>{
+    document.querySelector(selector).innerHTML=`Markdown 加载失败：${error.message}`;
+  });
+}
+document.addEventListener('DOMContentLoaded',function(){//等待文档完全加载和解析完成
+  let resize_timer;
+  window.addEventListener('resize',()=>{
+    if(resize_timer)cancelAnimationFrame(resize_timer);
+    resize_timer=requestAnimationFrame(footer);
+  });
+  footer();
+  putmarkdown("article","./index.md");
+});
+    </script>
+  </body>
+</html>
